@@ -6,11 +6,10 @@
   "scripts": {
     "start": "parcel index.html --open"
   },
-  "dependencies": {
-    "parcel": "1.12.4"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "parcel-bundler": "^1.6.1"
+    "parcel": "^2.0.0-beta.1",
+    "sass": "^1.32.8"
   },
   "keywords": []
 }
