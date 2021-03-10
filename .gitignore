@@ -1,5 +1,5 @@
 node_modules
 *.lock
-*lock.json
 .cache
+.parcel-cache
 dist
