@@ -2,20 +2,53 @@
   background-color: $color-primary-light;
   background-image: url("../images/hero/mobile/mobile-leaves.png"),
     url("../images/hero/mobile/mobile-plantperson.png");
-  background-size: 100%, 85%;
+  background-size: 100%, 80%;
   background-repeat: no-repeat;
-  background-position: center;
-  background-position-y: 0, 375px;
+  background-position: top center, bottom center;
   height: 100vh;
-  padding-bottom: 1.875rem;
+
+  @media (min-width: $desktop) {
+    background-image: url("../images/hero/desktop/left-leaves.png"),
+      url("../images/hero/desktop/right-leaves.png"),
+      url("../images/hero/desktop/plantperson.png");
+    background-size: 60%, 25%, 23%;
+    background-position: 0%, 100%, 72%;
+    height: auto;
+    min-height: 500px;
+    max-height: 500px;
+    min-width: 1440px;
+    padding-bottom: 0;
+  }
+
+  &__container {
+    margin: 0 7%;
+    @media (min-width: $desktop) {
+      margin: 0 10%;
+    }
+  }
 
   &__logo {
-    padding-top: 1.6rem;
+    padding-top: 10%;
+    @media (min-width: $desktop) {
+      padding-top: 3%;
+    }
   }
 
   &__title {
     color: #ffffff;
-    font-size: 2rem;
-    margin: 2rem 0 1.6rem;
+    font-size: 1.8rem;
+    margin: 10% 0 5%;
+    @media (min-width: $desktop) {
+      font-size: 3rem;
+      max-width: 45%;
+      margin: 3% 0 2%;
+    }
+  }
+
+  &__icon {
+    max-width: 1.8rem;
+    @media (min-width: $desktop) {
+      padding-bottom: 3%;
+    }
   }
 }
