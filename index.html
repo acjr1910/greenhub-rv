@@ -12,63 +12,31 @@
   </head>
   <body>
     <section class="hero">
-      <div class="hero__content container-w-30">
+      <div class="mw-30">
         <div class="hero__logo">
           <img src="images/icons/logo-white.svg" alt="Greenthumb" />
         </div>
         <div class="hero__title">
           <h1>Find your next green friend</h1>
         </div>
-        <div class="hero__arrow-down">
+        <div class="hero__icon">
           <img src="images/icons/arrow-down.svg" alt="Greenthumb" />
         </div>
       </div>
-      <div class="hero__images">
-        <div class="leaves">
-          <picture>
-            <source
-              class="leaves-mobile-image"
-              media="(max-width: 1024px)"
-              srcset="images/hero/mobile/mobile-leaves.png"
-            />
-            <source
-              class="left-leaves-desktop-image"
-              media="(min-width: 1025px)"
-              srcset="images/hero/desktop/left-leaves.png"
-            />
-            <source
-              class="right-leaves-desktop-image"
-              media="(min-width: 1025px)"
-              srcset="images/hero/desktop/right-leaves.png"
-            />
-            <img
-              class="leaves-mobile-image"
-              src="images/hero/mobile/mobile-leaves.png"
-              alt="Mobile Leaves"
-            />
-          </picture>
-        </div>
-        <div class="plant-person">
-          <picture>
-            <source
-              class="leaves-mobile-image"
-              media="(max-width: 1024px)"
-              srcset="images/hero/mobile/mobile-plantperson.png"
-            />
-            <source
-              media="(min-width: 1025px)"
-              srcset="images/hero/desktop/plantperson.png"
-            />
-            <img
-              class="plant-person-image"
-              src="images/hero/mobile/mobile-plantperson.png"
-              alt="Plant Person"
-            />
-          </picture>
-        </div>
-      </div>
     </section>
-    <main class="main"></main>
+    <main class="main">
+      <section class="filter">
+        <div class="filter__sunlight">
+          <p>1. Set the amount of sunligth your plant will get</p>
+        </div>
+        <div class="filter__water">
+          <p>2. How often do you want to water your plant</p>
+        </div>
+        <div class="filter__chew">
+          <p>3. Do you have pets? Do they chew plants?</p>
+        </div>
+      </section>
+    </main>
     <script type="module" src="./js/app.js"></script>
   </body>
 </html>

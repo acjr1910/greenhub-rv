@@ -1,36 +1,21 @@
 .hero {
   background-color: $color-primary-light;
+  background-image: url("../images/hero/mobile/mobile-leaves.png"),
+    url("../images/hero/mobile/mobile-plantperson.png");
+  background-size: 100%, 85%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 0, 375px;
+  height: 100vh;
   padding-bottom: 1.875rem;
-  position: relative;
-
-  &__content {
-    position: absolute;
-    top: 0.5px;
-    margin: 0 $lateral-margin;
-    z-index: 3;
-  }
 
   &__logo {
-    margin-top: 1.6rem;
+    padding-top: 1.6rem;
   }
 
   &__title {
-    font-size: 2rem;
     color: #ffffff;
+    font-size: 2rem;
     margin: 2rem 0 1.6rem;
-  }
-
-  &__images {
-    .leaves {
-      position: relative;
-      z-index: 2;
-    }
-    .plant-person {
-      display: flex;
-      margin: 0 auto;
-      margin-top: -90px;
-      max-width: 85%;
-      position: relative;
-    }
   }
 }
