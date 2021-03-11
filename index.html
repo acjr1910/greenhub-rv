@@ -25,18 +25,46 @@
       </div>
       <div class="hero__images">
         <div class="leaves">
-          <img
-            class="leaves-mobile-image"
-            src="images/hero/mobile/mobile-leaves.png"
-            alt="Mobile Leaves"
-          />
+          <picture>
+            <source
+              class="leaves-mobile-image"
+              media="(max-width: 1024px)"
+              srcset="images/hero/mobile/mobile-leaves.png"
+            />
+            <source
+              class="left-leaves-desktop-image"
+              media="(min-width: 1025px)"
+              srcset="images/hero/desktop/left-leaves.png"
+            />
+            <source
+              class="right-leaves-desktop-image"
+              media="(min-width: 1025px)"
+              srcset="images/hero/desktop/right-leaves.png"
+            />
+            <img
+              class="leaves-mobile-image"
+              src="images/hero/mobile/mobile-leaves.png"
+              alt="Mobile Leaves"
+            />
+          </picture>
         </div>
         <div class="plant-person">
-          <img
-            class="plant-person-image"
-            src="images/hero/mobile/mobile-plantperson.png"
-            alt="Plant Person"
-          />
+          <picture>
+            <source
+              class="leaves-mobile-image"
+              media="(max-width: 1024px)"
+              srcset="images/hero/mobile/mobile-plantperson.png"
+            />
+            <source
+              media="(min-width: 1025px)"
+              srcset="images/hero/desktop/plantperson.png"
+            />
+            <img
+              class="plant-person-image"
+              src="images/hero/mobile/mobile-plantperson.png"
+              alt="Plant Person"
+            />
+          </picture>
         </div>
       </div>
     </section>
