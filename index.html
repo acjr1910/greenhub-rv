@@ -12,32 +12,35 @@
   </head>
   <body>
     <section class="hero">
-      <div class="hero__logo">
-        <img src="images/icons/logo-white.svg" alt="Greenthumb" />
+      <div class="hero__content">
+        <div class="hero__logo">
+          <img src="images/icons/logo-white.svg" alt="Greenthumb" />
+        </div>
+        <div class="hero__title">
+          <h1>Find your next green friend</h1>
+        </div>
+        <div class="hero__arrow-down">
+          <img src="images/icons/arrow-down.svg" alt="Greenthumb" />
+        </div>
       </div>
-      <div class="hero__image-composition">
-        <img src="images/icons/pet.svg" alt="Leaves" />
-        <img src="images/hero/mobile/mobile-leaves.png" alt="Mobile Leaves" />
-        <img
-          src="images/hero/mobile/mobile-plantperson.png"
-          alt="Plant Person"
-        />
+      <div class="hero__images">
+        <div class="leaves">
+          <img
+            class="leaves-mobile-image"
+            src="images/hero/mobile/mobile-leaves.png"
+            alt="Mobile Leaves"
+          />
+        </div>
+        <div class="plant-person">
+          <img
+            class="plant-person-image"
+            src="images/hero/mobile/mobile-plantperson.png"
+            alt="Plant Person"
+          />
+        </div>
       </div>
     </section>
-    <main class="main">
-      <section class="filters">
-        <div class="filter">
-          <p>1. Set the amount of sunlight your plant will get.</p>
-        </div>
-        <div class="filter">
-          <p>2. How often do you want to water your plant?</p>
-        </div>
-        <div class="filter">
-          <p>3. Do you have pets? Do they chew plants?</p>
-        </div>
-      </section>
-      <section class="results"></section>
-    </main>
+    <main class="main"></main>
     <script type="module" src="./js/app.js"></script>
   </body>
 </html>
