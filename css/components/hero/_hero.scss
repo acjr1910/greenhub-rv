@@ -1,6 +1,6 @@
 .hero {
   background-color: $color-primary-light;
-  padding-bottom: 1.875rem;
+  padding-bottom: 10%;
   position: relative;
 
   &__content {
@@ -11,26 +11,45 @@
   }
 
   &__logo {
-    margin-top: 1.6rem;
+    margin-top: 10%;
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ffffff;
-    margin: 2rem 0 1.6rem;
+    margin: 10% 0 5%;
   }
 
-  &__images {
-    .leaves {
+  &__icon {
+    > img {
+      width: 12%;
+    }
+  }
+
+  &__composition {
+    .mobile-left-leaves {
       position: relative;
       z-index: 2;
     }
-    .plant-person {
+    .mobile-plant-person {
       display: flex;
       margin: 0 auto;
-      margin-top: -90px;
-      max-width: 85%;
+      margin-top: -25%;
+      max-width: 90%;
       position: relative;
+    }
+  }
+
+  &__mobile-composition {
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__desktop-composition {
+    display: none;
+    @media (min-width: $desktop) {
+      display: flex;
     }
   }
 }
