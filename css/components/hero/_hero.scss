@@ -1,0 +1,31 @@
+.hero {
+  background-color: $color-primary-light;
+  padding-bottom: 30px;
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    z-index: 3;
+  }
+
+  &__title {
+    font-size: 32px;
+    color: #ffffff;
+  }
+
+  &__images {
+    .leaves {
+      position: relative;
+      z-index: 2;
+    }
+    .plant-person {
+      display: flex;
+      margin: 0 auto;
+      margin-top: -90px;
+      max-width: 85%;
+      position: relative;
+    }
+  }
+}
