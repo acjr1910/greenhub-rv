@@ -1,0 +1,43 @@
+.filter {
+  width: 100%;
+  margin: 10% 0;
+  &:first-child {
+    @media (max-width: $tablet) {
+      margin: 2% 0 10%;
+    }
+  }
+  @media (min-width: $tablet) {
+    width: 30%;
+  }
+
+  &__illustration {
+    > img {
+      max-width: 75px;
+    }
+    .waterycan-img {
+      max-width: 103px;
+    }
+  }
+
+  &__description {
+    color: $color-gray-light;
+    margin: 5% 0;
+  }
+
+  &__selection {
+    position: relative;
+    select {
+      appearance: none;
+      width: 100%;
+      background-color: $color-white;
+      border: 1px solid $color-gray-light;
+      border-radius: 25px;
+      color: $color-gray-light;
+      font-family: $font-family;
+      text-transform: capitalize;
+      padding: 4% 6%;
+    }
+  }
+  &__selection:after {
+  }
+}

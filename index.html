@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Front End Test - Greenthumb</title>
+    <title>Greenthumb</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="./css/index.scss" />
   </head>
   <body>
+    <!-- Hero -->
     <section class="hero">
-      <div class="hero__content container">
+      <div class="hero__content container center-absolute">
         <div class="hero__logo">
-          <img src="images/icons/logo-white.svg" alt="Greenthumb" />
+          <img src="images/icons/logo-white.svg" alt="Greenthumb Logo" />
         </div>
         <div class="hero__title">
           <h1>Find your next green friend</h1>
         </div>
         <div class="hero__icon">
-          <img src="images/icons/arrow-down.svg" alt="Greenthumb" />
+          <img src="images/icons/arrow-down.svg" alt="Arrow Down Icon" />
         </div>
       </div>
       <div class="hero__composition">
@@ -29,14 +30,14 @@
               <img
                 class="leaves-mobile-image"
                 src="images/hero/mobile/mobile-leaves.png"
-                alt="Mobile Leaves"
+                alt="Plant leaves"
               />
           </div>
           <div class="mobile-plant-person">
             <img
               class="plant-person-image"
               src="images/hero/mobile/mobile-plantperson.png"
-              alt="Plant Person"
+              alt="Person holding a plant glass"
             />
           </div>
         </div>
@@ -45,26 +46,77 @@
               <img
                 class="leaves-mobile-image"
                 src="images/hero/desktop/left-leaves.png"
-                alt="Mobile Leaves"
+                alt="Plant leaves"
               />
           </div>
           <div class="desktop-plant-person">
             <img
               class="plant-person-image"
               src="images/hero/desktop/plantperson.png"
-              alt="Plant Person"
+              alt="Person holding a plant glass"
             />
           </div>
           <div class="desktop-leaves-right">
             <img
               class="leaves-mobile-image"
               src="images/hero/desktop/right-leaves.png"
-              alt="Mobile Leaves"
+              alt="Plant leaves"
             />
         </div>
       </div>
     </section>
-    <main class="main"></main>
+    <main class="main">
+      <!-- Filters -->
+      <section class="filters container">
+        <div class="filter">
+          <div class="filter__illustration">
+            <img src="images/illustrations/sun.png" alt="Illustration of the Sun">
+          </div>
+          <div class="filter__description">
+            <p><strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.</p>
+          </div>
+          <div class="filter__selection">
+            <select name="sun" id="sun" class="filter__select">
+              <option value="" selected disabled hidden>Select...</option>
+              <option value="no">no</option>
+              <option value="low">low</option>
+              <option value="high">high</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter__illustration">
+            <img class="flip-image waterycan-img" src="images/illustrations/wateringcan.png" alt="Illustration of the Sun">
+          </div>
+          <div class="filter__description">
+            <p><strong>2.</strong> How often do you want to <strong>water</strong> your plant?</p>
+          </div>
+          <div class="filter__selection">
+            <select name="sun" id="sun" class="filter__select">
+              <option value="" selected disabled hidden>Select...</option>
+              <option value="regularly">regularly</option>
+              <option value="daily">daily</option>
+              <option value="rarely">rarely</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter__illustration">
+            <img src="images/illustrations/dog.png" alt="Illustration of the Sun">
+          </div>
+          <div class="filter__description">
+            <p><strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants? </p>
+          </div>
+          <div class="filter__selection">
+            <select name="sun" id="sun" class="filter__select">
+              <option value="" selected disabled hidden>Select...</option>
+              <option value="true">true</option>
+              <option value="false">false</option>
+            </select>
+          </div>
+        </div>
+      </section>
+    </main>
     <script type="module" src="./js/app.js"></script>
   </body>
 </html>

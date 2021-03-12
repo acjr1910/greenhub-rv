@@ -1,3 +1,27 @@
 .container {
-  margin: 0 $lateral-margin;
+  width: 100%;
+  max-width: 80%;
+  @media (min-width: $tablet) {
+    max-width: 65%;
+  }
+}
+
+.center-absolute {
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5% auto;
+}
+
+.flip-image {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
