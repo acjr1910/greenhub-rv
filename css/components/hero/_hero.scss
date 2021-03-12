@@ -25,7 +25,6 @@
       width: 50vw;
     }
     @media (min-width: $tablet) {
-      margin-top: 5%;
       > img {
         width: 15vw;
       }
@@ -35,10 +34,10 @@
   &__title {
     color: #ffffff;
     font-size: 8vw;
-    margin: 10% 0 5%;
+    margin: 15% 0 10%;
     @media (min-width: $tablet) {
       font-size: 3vw;
-      margin: 5% 0 3%;
+      margin: 8% 0 5%;
     }
   }
 
@@ -46,7 +45,7 @@
     > img {
       width: 7vw;
       @media (min-width: $tablet) {
-        width: initial;
+        width: 2vw;
       }
     }
   }
@@ -56,10 +55,12 @@
     .mobile-plant-person,
     .desktop-leaves-left,
     .desktop-leaves-right {
+      > img {
+        width: 100%;
+      }
       display: flex;
     }
     .mobile-left-leaves {
-      width: 100%;
       position: relative;
       z-index: 2;
     }
