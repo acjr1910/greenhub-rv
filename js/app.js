@@ -1,6 +1,10 @@
+import dropdown from "./modules/dropdown";
+
 /**
  * Main application
  */
-const app = async () => {};
+const app = () => {
+  dropdown();
+};
 
 document.addEventListener("DOMContentLoaded", app);
