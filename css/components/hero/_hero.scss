@@ -2,37 +2,68 @@
   background-color: $color-primary-light;
   padding-bottom: 10%;
   position: relative;
+  min-width: 320px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 0;
+  }
 
   &__content {
     position: absolute;
     top: 0.5px;
     margin: 0 $lateral-margin;
     z-index: 3;
+    @media (min-width: $tablet) {
+      max-width: 34vw;
+      margin-left: 18vw;
+    }
   }
 
   &__logo {
     margin-top: 10%;
+    > img {
+      width: 50vw;
+    }
+    @media (min-width: $tablet) {
+      margin-top: 5%;
+      > img {
+        width: 15vw;
+      }
+    }
   }
 
   &__title {
-    font-size: 1.8rem;
     color: #ffffff;
+    font-size: 8vw;
     margin: 10% 0 5%;
+    @media (min-width: $tablet) {
+      font-size: 3vw;
+      margin: 5% 0 3%;
+    }
   }
 
   &__icon {
     > img {
-      width: 12%;
+      width: 7vw;
+      @media (min-width: $tablet) {
+        width: initial;
+      }
     }
   }
 
   &__composition {
+    .mobile-left-leaves,
+    .mobile-plant-person,
+    .desktop-leaves-left,
+    .desktop-leaves-right {
+      display: flex;
+    }
     .mobile-left-leaves {
+      width: 100%;
       position: relative;
       z-index: 2;
     }
     .mobile-plant-person {
-      display: flex;
       margin: 0 auto;
       margin-top: -25%;
       max-width: 90%;
@@ -41,14 +72,18 @@
   }
 
   &__mobile-composition {
-    @media (min-width: $desktop) {
+    @media (min-width: $tablet) {
       display: none;
     }
   }
 
   &__desktop-composition {
     display: none;
-    @media (min-width: $desktop) {
+    .desktop-plant-person {
+      display: flex;
+      align-items: center;
+    }
+    @media (min-width: $tablet) {
       display: flex;
     }
   }
