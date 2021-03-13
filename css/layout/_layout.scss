@@ -19,6 +19,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 5% auto;
+  @media (min-width: $tablet) {
+    margin: 1% auto;
+  }
 }
 
 .flip-image {

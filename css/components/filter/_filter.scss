@@ -7,10 +7,15 @@
     }
   }
   @media (min-width: $tablet) {
-    width: 30%;
+    width: 25%;
+    margin: 5% 0;
   }
 
   &__illustration {
+    display: flex;
+    align-items: center;
+    min-height: 75px;
+
     > img {
       max-width: 75px;
     }
@@ -22,6 +27,10 @@
   &__description {
     color: $color-gray-light;
     margin: 5% 0;
+    font-size: 0.875rem;
+    @media (min-width: $tablet) {
+      margin: 8% 0 10%;
+    }
   }
 
   &__selection {

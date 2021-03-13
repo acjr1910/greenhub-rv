@@ -3,10 +3,9 @@
   position: relative;
   z-index: 2;
   color: $color-gray-light;
-  transition: border-radius 3s linear;
 
   .dropdown-select {
-    padding: 0.8rem;
+    padding: 0.6rem 1rem;
     border: 1px solid $color-gray-light;
     border-radius: 25px;
     background-color: $color-white;
@@ -53,7 +52,6 @@
     top: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.1s linear;
 
     &__item {
       padding: 1rem;
@@ -69,7 +67,7 @@
     }
   }
 
-  &--open:hover .dropdown-list {
+  &--open .dropdown-list {
     opacity: 1;
     visibility: visible;
   }
