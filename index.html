@@ -82,9 +82,9 @@
               <div class='dropdown-select__icon'></div>
             </div>
             <div class="dropdown-list">
-              <div class="dropdown-list__item" data-list-value="no">No sunlight</div>
-              <div class="dropdown-list__item" data-list-value="low">Low sunlight</div>
-              <div class="dropdown-list__item" data-list-value="high">High sunlight</div>
+              <div class="dropdown-list__item" data-list-key="sun" data-list-value="no">No sunlight</div>
+              <div class="dropdown-list__item" data-list-key="sun" data-list-value="low">Low sunlight</div>
+              <div class="dropdown-list__item" data-list-key="sun" data-list-value="high">High sunlight</div>
             </div>
           </div>
           <!-- /Dropdown -->
@@ -103,9 +103,9 @@
               <div class='dropdown-select__icon'></div>
             </div>
             <div class="dropdown-list">
-              <div class="dropdown-list__item" data-list-value="rarely">Rarely</div>
-              <div class="dropdown-list__item" data-list-value="regularly">Regularly</div>
-              <div class="dropdown-list__item" data-list-value="daily">Daily</div>
+              <div class="dropdown-list__item" data-list-key="water" data-list-value="rarely">Rarely</div>
+              <div class="dropdown-list__item" data-list-key="water" data-list-value="regularly">Regularly</div>
+              <div class="dropdown-list__item" data-list-key="water" data-list-value="daily">Daily</div>
             </div>
           </div>
           <!-- /Dropdown -->
@@ -124,18 +124,16 @@
               <div class='dropdown-select__icon'></div>
             </div>
             <div class="dropdown-list">
-              <div class="dropdown-list__item" data-list-value="false">No/They don’t care</div>
-              <div class="dropdown-list__item" data-list-value="true">Yes</div>
+              <div class="dropdown-list__item" data-list-key="pets" data-list-value="false">No/They don’t care</div>
+              <div class="dropdown-list__item" data-list-key="pets" data-list-value="true">Yes</div>
             </div>
           </div>
           <!-- /Dropdown -->
         </div>
       </section>
       <!-- Results -->
-      <section class="results">
-        
-      </section>
+      <section id="results"></section>
     </main>
   </body>
-  <script type="module" src="./js/app.js"></script>
+  <script type="module" src="./js/index.js"></script>
 </html>
