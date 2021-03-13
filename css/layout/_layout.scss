@@ -3,6 +3,7 @@
   max-width: 80%;
   @media (min-width: $tablet) {
     max-width: 65%;
+    margin: 0 auto;
   }
 }
 
@@ -27,4 +28,8 @@
 .flip-image {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+#cards {
+  display: flex;
 }
