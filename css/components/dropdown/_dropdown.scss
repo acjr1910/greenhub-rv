@@ -1,58 +1,85 @@
 .dropdown {
+  width: 100%;
   position: relative;
-  font-family: Arial;
+  z-index: 2;
+  color: $color-gray-light;
+  transition: border-radius 3s linear;
 
-  select {
-    display: none;
-  }
-
-  &__selected {
+  .dropdown-select {
+    padding: 0.8rem;
+    border: 1px solid $color-gray-light;
+    border-radius: 25px;
     background-color: $color-white;
-  }
-
-  &__selected::after {
-    background-color: $color-white;
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 20px;
-    width: 20px;
-    height: 0;
-    border: 1px solid transparent;
-    border-color: blue transparent transparent transparent;
-  }
-
-  &__selected &--arrow-active:after {
-    background-color: $color-white;
-    border-color: transparent transparent #fff transparent;
-    top: 7px;
-  }
-
-  &__options div,
-  &__selected {
-    color: $color-gray-light;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: $color-gray-light;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
-    user-select: none;
+
+    &__icon {
+      position: relative;
+      height: 15px;
+      width: 15px;
+      transition: all 0.2s;
+    }
+    &__icon:after,
+    &__icon:before {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      width: 0.085rem;
+      height: 100%;
+      transition: all 0.2s;
+    }
+    &__icon::before {
+      left: -5px;
+      transform: rotate(-45deg);
+      background-color: $color-gray-light;
+    }
+    &__icon::after {
+      left: 5px;
+      transform: rotate(45deg);
+      background-color: $color-gray-light;
+    }
   }
 
-  &__options {
-    position: absolute;
+  .dropdown-list {
+    width: 100%;
+    border-left: 1px solid $color-gray-light;
+    border-bottom: 1px solid $color-gray-light;
+    border-right: 1px solid $color-gray-light;
+    border-radius: 0 0 $dropdown-radius $dropdown-radius;
     background-color: $color-white;
+    position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.1s linear;
+
+    &__item {
+      padding: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-primary-light;
+        color: $color-white;
+      }
+      &:last-child:hover {
+        border-radius: 0 0 $dropdown-radius $dropdown-radius;
+      }
+    }
   }
 
-  &--select-hide {
-    display: none;
+  &--open:hover .dropdown-list {
+    opacity: 1;
+    visibility: visible;
   }
-
-  &__options div:hover,
-  .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
+  &--open .dropdown-select__icon:before {
+    transform: rotate(45deg);
+  }
+  &--open .dropdown-select__icon:after {
+    transform: rotate(-45deg);
+  }
+  &--open .dropdown-select {
+    border-radius: $dropdown-radius $dropdown-radius 0 0;
   }
 }
