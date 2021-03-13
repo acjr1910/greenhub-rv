@@ -1,4 +1,4 @@
-import dropdown from "./modules/dropdown";
+import dropdown from "./components/dropdown";
 
 /**
  * Main application

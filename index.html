@@ -77,12 +77,15 @@
           </div>
           <!-- Dropdown Sunlight -->
           <div class="dropdown">
-            <select name="sun" id="sun" class="filter__select">
-              <option value="" selected disabled hidden>Select...</option>
-              <option value="no">No Sunlight</option>
-              <option value="low">Low Sunlight</option>
-              <option value="high">High Sunligth</option>
-            </select>
+            <div class="dropdown-select">
+              <span class='dropdown-select__selected'>Select...</span>
+              <div class='dropdown-select__icon'></div>
+            </div>
+            <div class="dropdown-list">
+              <div class="dropdown-list__item" data-list-value="no">No sunlight</div>
+              <div class="dropdown-list__item" data-list-value="low">Low sunlight</div>
+              <div class="dropdown-list__item" data-list-value="high">High sunlight</div>
+            </div>
           </div>
           <!-- /Dropdown -->
         </div>
@@ -95,14 +98,17 @@
           </div>
           <!-- Dropdown Water -->
           <div class="dropdown">
-            <select name="water" id="water" class="filter__select">
-              <option value="" selected disabled hidden>Select...</option>
-              <option value="rarely">Rarely</option>
-              <option value="regularly">Regularly</option>
-              <option value="daily">Daily</option>
-            </select>
+            <div class="dropdown-select">
+              <span class='dropdown-select__selected'>Select...</span>
+              <div class='dropdown-select__icon'></div>
+            </div>
+            <div class="dropdown-list">
+              <div class="dropdown-list__item" data-list-value="rarely">Rarely</div>
+              <div class="dropdown-list__item" data-list-value="regularly">Regularly</div>
+              <div class="dropdown-list__item" data-list-value="daily">Daily</div>
+            </div>
           </div>
-           <!-- /Dropdown Water -->
+          <!-- /Dropdown -->
         </div>
         <div class="filter">
           <div class="filter__illustration">
@@ -111,15 +117,18 @@
           <div class="filter__description">
             <p><strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants? </p>
           </div>
-           <!-- Dropdown Pets -->
-           <div class="dropdown">
-            <select name="water" id="water" class="filter__select">
-              <option value="" selected disabled hidden>Select...</option>
-              <option value="false">No/They don't care</option>
-              <option value="true">Yes</option>
-            </select>
+          <!-- Dropdown Pets -->
+          <div class="dropdown">
+            <div class="dropdown-select">
+              <span class='dropdown-select__selected'>Select...</span>
+              <div class='dropdown-select__icon'></div>
+            </div>
+            <div class="dropdown-list">
+              <div class="dropdown-list__item" data-list-value="false">No/They don’t care</div>
+              <div class="dropdown-list__item" data-list-value="true">Yes</div>
+            </div>
           </div>
-           <!-- /Dropdown Pets -->
+          <!-- /Dropdown -->
         </div>
       </section>
     </main>
