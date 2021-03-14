@@ -25,10 +25,11 @@ export default function requestData() {
         isRequestingData = false;
         // 2 - Remove Loading
       })
-      .catch(() => {
+      .catch((e) => {
+        console.log("error", e);
         this.set({
           ...this.state,
-          plants: data,
+          plants: [],
         });
       });
   }

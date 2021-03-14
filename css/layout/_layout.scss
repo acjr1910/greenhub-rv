@@ -32,4 +32,7 @@
 
 #cards {
   display: flex;
+  overflow: scroll;
+  max-width: initial;
+  padding: 10%;
 }

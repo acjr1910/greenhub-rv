@@ -1,4 +1,48 @@
 .card {
   background-color: $color-white;
+  color: $color-primary;
+  min-width: 258px;
   max-width: 258px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  padding: 10% 0;
+  cursor: pointer;
+  position: relative;
+
+  &__image {
+    height: 250px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    > img {
+      max-width: 75%;
+      margin: 0 auto;
+    }
+  }
+  &__name {
+    margin: 5% 0;
+  }
+  &__icons {
+    img {
+      margin-left: 10px;
+    }
+  }
+  &__price-icon {
+    display: flex;
+    justify-content: space-between;
+  }
+  &--favorite::before {
+    content: 'Staff favorite';
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    background-color: $color-primary-light;
+    padding: 12px 16px;
+    border-radius: 0px 25px 25px 0px;
+  }
 }
