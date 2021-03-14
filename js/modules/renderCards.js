@@ -1,5 +1,6 @@
 import svgUrls from "../../images/icons/*.svg";
 
+/* -- Dictionary ----- */
 const ICONS_DICTIONARY = {
   sun: {
     high: "high-sun",
@@ -13,11 +14,18 @@ const ICONS_DICTIONARY = {
   },
 };
 
-function renderPlants(target, plants) {
-  console.log("plants", plants);
+/* -- Helpers ----- */
+function sortByFavorite(list) {
+  return list.sort((a, b) => b.staff_favorite - a.staff_favorite);
+}
 
+function renderPlants(target, plants) {
   if (!plants.length)
-    document.querySelector(".no-results").classList.remove("hide");
+    document.querySelector(".no-results").classList.remove("no-results--hide");
+  document.querySelector(".button").classList.add("button--hide");
+  document
+    .querySelector(".results-intro")
+    .classList.remove("results-intro--show");
 
   const cards = plants.map((plant) => {
     const imgDiv = document.createElement("div");
@@ -28,7 +36,7 @@ function renderPlants(target, plants) {
     imgDiv.append(img);
 
     const infoDiv = document.createElement("div");
-    infoDiv.setAttribute("class", "card__info");
+    infoDiv.setAttribute("class", "card__info container");
 
     const nameDiv = document.createElement("div");
     nameDiv.setAttribute("class", "card__name");
@@ -71,8 +79,6 @@ function renderPlants(target, plants) {
     iconsDiv.appendChild(sunIcon);
     iconsDiv.appendChild(waterIcon);
 
-    console.log("svgUrls", svgUrls);
-
     priceIconDiv.append(priceDiv);
     priceIconDiv.append(iconsDiv);
     infoDiv.append(nameDiv);
@@ -87,16 +93,16 @@ function renderPlants(target, plants) {
     return cardDiv;
   });
 
-  document.querySelector(".no-results").classList.add("hide");
+  document.querySelector(".no-results").classList.add("no-results--hide");
+  document.querySelector(".results-intro").classList.add("results-intro--show");
+  document.querySelector(".button").classList.add("button--show");
 
+  /* Clear prev cards */
+  target.innerHTML = "";
   return cards.map((card) => target.append(card));
 }
 
-function sortByFavorite(list) {
-  return list.sort((a, b) => b.staff_favorite - a.staff_favorite);
-}
-
-export default function renderResults() {
+export default function renderCards() {
   const resultsDiv = document.querySelector("#cards");
 
   this.state.plants.length

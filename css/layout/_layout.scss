@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   max-width: 80%;
+  margin: 0 auto;
   @media (min-width: $tablet) {
     max-width: 65%;
     margin: 0 auto;
@@ -34,5 +35,13 @@
   display: flex;
   overflow: scroll;
   max-width: initial;
-  padding: 10%;
+  padding: 5% 10%;
+}
+
+.loader {
+  padding: 15% 0;
+  display: none;
+  &--show {
+    display: block;
+  }
 }

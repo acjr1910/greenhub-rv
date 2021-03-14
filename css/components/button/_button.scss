@@ -1,0 +1,16 @@
+.button {
+    display: none;
+    color: $color-primary;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid $color-primary;
+    border-radius: 25px;
+    margin: 5% auto;
+    > img {
+        margin-right: 10px;
+        width: 13px;
+    }
+    &--show {
+        display: flex;
+    }
+}

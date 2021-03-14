@@ -5,6 +5,7 @@ import requestData from "./modules/requestData";
 import renderResults from "./modules/renderCards";
 
 import dropdown from "./components/dropdown";
+import button from "./components/button";
 
 export default function app() {
   const appState = new ObservableState({
@@ -28,6 +29,7 @@ export default function app() {
   });
 
   dropdown(dropdownObserver);
+  button();
 }
 
 document.addEventListener("DOMContentLoaded", app);

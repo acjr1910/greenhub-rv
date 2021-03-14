@@ -13,7 +13,9 @@ export default function requestData() {
 
     const queryParams = `?sun=${this.state.sun}&water=${this.state.water}&pets=${this.state.pets}`;
 
-    // 1 - Set Loading
+    /* Hide no results and display loader */
+    document.querySelector(".no-results").classList.add("no-results--hide");
+    document.querySelector(".loader").classList.add("loader--show");
 
     fetch(`${API_ENDPOINT}${queryParams}`)
       .then((res) => res.json())
@@ -22,11 +24,13 @@ export default function requestData() {
           ...this.state,
           plants: data,
         });
+
         isRequestingData = false;
-        // 2 - Remove Loading
+
+        /* Hide loader */
+        document.querySelector(".loader").classList.remove("loader--show");
       })
       .catch((e) => {
-        console.log("error", e);
         this.set({
           ...this.state,
           plants: [],
