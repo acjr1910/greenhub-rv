@@ -13,7 +13,7 @@ export default function requestData() {
 
     const queryParams = `?sun=${this.state.sun}&water=${this.state.water}&pets=${this.state.pets}`;
 
-    /* Hide no results and display loader */
+    /* Hide `no results` and display loader */
     document.querySelector(".no-results").classList.add("no-results--hide");
     document.querySelector(".loader").classList.add("loader--show");
 
