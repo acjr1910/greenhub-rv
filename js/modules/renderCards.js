@@ -1,6 +1,5 @@
 import svgUrls from "../../images/icons/*.svg";
 
-/* -- Dictionary ----- */
 const ICONS_DICTIONARY = {
   sun: {
     high: "high-sun",
@@ -14,19 +13,28 @@ const ICONS_DICTIONARY = {
   },
 };
 
-/* -- Helpers ----- */
 function sortByFavorite(list) {
   return list.sort((a, b) => b.staff_favorite - a.staff_favorite);
 }
 
-function renderPlants(target, plants) {
-  if (!plants.length)
-    document.querySelector(".no-results").classList.remove("no-results--hide");
+function addActiveClasses() {
+  document.querySelector(".no-results").classList.add("no-results--hide");
+  document.querySelector(".results-intro").classList.add("results-intro--show");
+  document.querySelector(".button").classList.add("button--show");
+}
+
+function removeActiveClasses() {
+  document.querySelector(".no-results").classList.remove("no-results--hide");
   document.querySelector(".button").classList.add("button--hide");
   document
     .querySelector(".results-intro")
     .classList.remove("results-intro--show");
+}
 
+function renderPlants(target, plants) {
+  if (!plants.length) removeActiveClasses();
+
+  /* for each plant, create an card element */
   const cards = plants.map((plant) => {
     const imgDiv = document.createElement("div");
     imgDiv.setAttribute("class", "card__image");
@@ -93,9 +101,7 @@ function renderPlants(target, plants) {
     return cardDiv;
   });
 
-  document.querySelector(".no-results").classList.add("no-results--hide");
-  document.querySelector(".results-intro").classList.add("results-intro--show");
-  document.querySelector(".button").classList.add("button--show");
+  addActiveClasses();
 
   /* Clear prev cards */
   target.innerHTML = "";

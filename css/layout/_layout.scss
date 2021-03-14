@@ -32,10 +32,22 @@
 }
 
 #cards {
+  display: none;
+}
+
+.show #cards {
   display: flex;
-  overflow: scroll;
-  max-width: initial;
-  padding: 5% 10%;
+  @media (max-width: $tablet) {
+    overflow: scroll;
+    max-width: initial;
+    padding: 5% 10%;
+  }
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    gap: 20px;
+  }
 }
 
 .loader {

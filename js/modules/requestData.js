@@ -2,6 +2,17 @@ const API_ENDPOINT = "https://front-br-challenges.web.app/api/v2/green-thumb/";
 
 let isRequestingData = false;
 
+function prepare() {
+  document.querySelector(".results").classList.remove("show");
+  document.querySelector(".loader").classList.add("loader--show");
+  document.querySelector(".no-results").classList.add("no-results--hide");
+}
+
+function cleanup() {
+  document.querySelector(".loader").classList.remove("loader--show");
+  document.querySelector(".results").classList.add("show");
+}
+
 export default function requestData() {
   const hasChangedState =
     JSON.stringify(this.prevState) !== JSON.stringify(this.state);
@@ -13,9 +24,7 @@ export default function requestData() {
 
     const queryParams = `?sun=${this.state.sun}&water=${this.state.water}&pets=${this.state.pets}`;
 
-    /* Hide `no results` and display loader */
-    document.querySelector(".no-results").classList.add("no-results--hide");
-    document.querySelector(".loader").classList.add("loader--show");
+    prepare();
 
     fetch(`${API_ENDPOINT}${queryParams}`)
       .then((res) => res.json())
@@ -27,8 +36,7 @@ export default function requestData() {
 
         isRequestingData = false;
 
-        /* Hide loader */
-        document.querySelector(".loader").classList.remove("loader--show");
+        cleanup();
       })
       .catch((e) => {
         this.set({

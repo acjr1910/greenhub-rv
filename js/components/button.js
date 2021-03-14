@@ -1,6 +1,4 @@
-/**
- * Apply button scroll top behavior
- */
+/* Apply button scroll top behavior */
 export default function button() {
   const buttonElement = document.querySelector(".button");
 

@@ -36,24 +36,28 @@
     }
   }
 
-
   .results-intro {
     display: none;
 
-    &--show {
-      display: flex;
-    }
-  }
-
-  .results-intro {
     flex-wrap: wrap;
     padding: 5% 0px;
     &__title {
       font-size: 2.5rem;
+      @media (min-width: $tablet) {
+        width: 100%;
+        font-size: 55px;
+      }
     }
     &__image {
       margin: 5% 0;
       max-width: 146px;
+      @media (min-width: $tablet) {
+        margin: 2% 0;
+        max-width: 158px;
+      }
+    }
+    &--show {
+      display: flex;
     }
   }
 }

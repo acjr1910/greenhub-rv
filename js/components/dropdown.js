@@ -1,6 +1,4 @@
-/**
- * Apply behavior to all dropdown's in the page
- */
+/* Apply behavior to all dropdown's in the page */
 export default function dropdown(observer) {
   const OPEN_STATE_CLASS = "dropdown--open";
 

@@ -8,6 +8,7 @@ import dropdown from "./components/dropdown";
 import button from "./components/button";
 
 export default function app() {
+  /* Setup app initial state */
   const appState = new ObservableState({
     sun: null,
     water: null,
@@ -15,11 +16,12 @@ export default function app() {
     plants: [],
   });
 
+  /* Subscribe appState fn's */
   appState.subscribe(requestData);
   appState.subscribe(renderResults);
 
+  /* Subscribe dropdowns fn's */
   const dropdownObserver = new Observer();
-
   dropdownObserver.subscribe((selectValue) => {
     const [key, value] = selectValue;
     appState.set({
@@ -28,6 +30,7 @@ export default function app() {
     });
   });
 
+  /* Add components behavior */
   dropdown(dropdownObserver);
   button();
 }
