@@ -1,6 +1,7 @@
 .results {
   background-color: $color-secondary;
   padding-bottom: 1rem;
+
   .no-results {
     display: flex;
     flex-wrap: wrap;
@@ -38,9 +39,9 @@
 
   .results-intro {
     display: none;
-
     flex-wrap: wrap;
     padding: 5% 0px;
+
     &__title {
       font-size: 2.5rem;
       @media (min-width: $tablet) {
@@ -48,6 +49,7 @@
         font-size: 55px;
       }
     }
+
     &__image {
       margin: 5% 0;
       max-width: 146px;
@@ -56,6 +58,7 @@
         max-width: 158px;
       }
     }
+
     &--show {
       display: flex;
     }

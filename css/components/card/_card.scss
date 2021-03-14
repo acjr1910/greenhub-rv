@@ -55,6 +55,7 @@
 
   &__name {
     margin: 5% 0;
+
     @media (min-width: $tablet) {
       > h3 {
         font-size: 1rem;
@@ -89,24 +90,29 @@
     @media (min-width: $tablet) {
       padding: 10% 0;
       align-items: flex-end;
+
       .card__image {
         > img {
           max-height: 300px;
         }
       }
+
       .card__info {
         display: flex;
         align-items: center;
       }
+
       .card__name {
         width: 65%;
         margin: 0;
       }
+
       .card__price-icon {
         width: 35%;
         flex-wrap: wrap;
         justify-content: flex-end;
       }
+
       .card__price {
         margin-bottom: 10px;
         > h4 {
@@ -114,11 +120,13 @@
           margin: 0;
         }
       }
+
       .card__icons {
         > img {
           width: 24px;
         }
       }
+
       .card__name {
         > h3 {
           font-size: 35px;

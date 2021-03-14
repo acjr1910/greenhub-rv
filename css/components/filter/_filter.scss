@@ -1,11 +1,13 @@
 .filter {
   width: 100%;
   margin: 10% 0;
+
   &:first-child {
     @media (max-width: $tablet) {
       margin: 2% 0 10%;
     }
   }
+
   @media (min-width: $tablet) {
     width: 25%;
     margin: 5% 0;
@@ -19,6 +21,7 @@
     > img {
       max-width: 75px;
     }
+
     .waterycan-img {
       max-width: 103px;
     }
@@ -28,6 +31,7 @@
     color: $color-gray-light;
     margin: 5% 0;
     font-size: 0.875rem;
+
     @media (min-width: $tablet) {
       margin: 8% 0 10%;
     }

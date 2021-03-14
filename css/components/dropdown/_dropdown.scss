@@ -20,6 +20,7 @@
       width: 15px;
       transition: all 0.2s;
     }
+
     &__icon:after,
     &__icon:before {
       content: "";
@@ -29,11 +30,13 @@
       height: 100%;
       transition: all 0.2s;
     }
+
     &__icon::before {
       left: -5px;
       transform: rotate(-45deg);
       background-color: $color-gray-light;
     }
+
     &__icon::after {
       left: 5px;
       transform: rotate(45deg);
@@ -61,6 +64,7 @@
         background-color: $color-primary-light;
         color: $color-white;
       }
+
       &:last-child:hover {
         border-radius: 0 0 $dropdown-radius $dropdown-radius;
       }
@@ -71,12 +75,15 @@
     opacity: 1;
     visibility: visible;
   }
+
   &--open .dropdown-select__icon:before {
     transform: rotate(45deg);
   }
+
   &--open .dropdown-select__icon:after {
     transform: rotate(-45deg);
   }
+
   &--open .dropdown-select {
     border-radius: $dropdown-radius $dropdown-radius 0 0;
   }
